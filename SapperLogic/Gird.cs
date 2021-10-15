@@ -62,13 +62,13 @@ namespace SapperLogic
             Size = size;
             State = true;
         }
-        private HashSet<int>  ID { get; set; }
+
         /// <summary>
         /// Generating a grid of cells and randomly generating bomb slots
         /// </summary>
         private static void GenerateGirds()
         {
-             var ID = new HashSet<int>();
+            var ID = new HashSet<int>();
             _instance.ListBomb = new List<Cell>();
             _instance.ListFlag = new List<Cell>();
             _instance.Girds = new Cell[_instance.Size, _instance.Size];
@@ -76,7 +76,6 @@ namespace SapperLogic
             GenerateGirdsManipulation.GridsInit();
             GenerateGirdsManipulation.BombsFoCells(ref ID);
             GenerateGirdsManipulation.AroundAllGrid();
-            _instance.ID = ID;
         }
 
         /// <summary>
@@ -85,9 +84,9 @@ namespace SapperLogic
         /// <returns>A reference to the new / current instance of the class</returns>
         public static Grid GetInstance()
         {
-            const int Default = 10;
+            const int Default = 3;
             if (Grid._instance != null) return Grid._instance;
-            _instance = new Grid(1, Default)
+            _instance = new Grid(Default, Default)
             {
                 FirstOpen = true
             }; 
@@ -121,9 +120,10 @@ namespace SapperLogic
         }
 
         public static void Clean()
-        { 
+        {
             _instance = null;
         }
+
         /// <summary>
         /// Put Flag on Cell
         /// </summary>
@@ -165,15 +165,12 @@ namespace SapperLogic
         /// <param name="x">Coordinate fo x</param>
         public bool? OpenCell(int y, int x)
         {
-            var Id = _instance.ID;
             if (FirstOpen && _instance.Girds[y, x].Bomb)
             {
-                ListBomb = new List<Cell>();
                 GenerateGirdsManipulation.FirstCellOpen(y, x);
+                
             }
-
             _instance.FirstOpen = false;
-            
 
 
             if (Girds[y, x].Check)
@@ -181,8 +178,7 @@ namespace SapperLogic
                 var flags = Around.AroundFlag(y, x);
                 if (flags == _instance.Girds[y, x].Around)
                 {
-
-                    return Around.AroundOpen(y, x);
+                    Around.AroundOpen(y, x);
                 }
             }
             else

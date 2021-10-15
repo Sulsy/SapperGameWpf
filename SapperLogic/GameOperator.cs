@@ -55,6 +55,7 @@ namespace SapperLogic
 
             if (Defuse == instance.ListBomb.Count && instance.ListFlag.Count == instance.ListBomb.Count|| NoBombsOpened(instance))
             {
+                Console.WriteLine("You Win");
                 return true;
             }
             else

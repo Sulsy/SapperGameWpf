@@ -70,7 +70,7 @@ namespace SapperLogic
         /// </summary>
         /// <param name="y">Coordinate fo y</param>
         /// <param name="x">Coordinate fo x</param>
-        public static bool? AroundOpen(int y, int x)
+        public static void AroundOpen(int y, int x)
         {
             var instance = GetInstance();
             for (var i = y - 1; i < y + 2; i++)
@@ -80,15 +80,10 @@ namespace SapperLogic
                     if (!CountCoordinate(instance, i, j) || instance.Girds[i, j].Flag ||
                         instance.Girds[i, j].Check) continue;
                     instance.OpenCell(i, j);
-                    var bol=GameOperator.GameState(instance.Girds[i, j]);
-                    if (bol==null)
-                    {
-                        return null;
-                    }
+                    GameOperator.GameState(instance.Girds[i, j]);
+
                 }
             }
-
-            return true;
         }
         /// <summary>
         /// Searches for a cage with a not zero Around Cell within a radius of one cage from the given one

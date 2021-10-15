@@ -38,7 +38,6 @@ namespace SapperLogic
         public static void BombsFoCells(ref HashSet<int> ID)
         {
             var instance = GetInstance();
-            instance.ListBomb = new List<Cell>();
             foreach (var cell in instance.Girds)
             {
                 foreach (var ids in ID.Where(ids => cell.Id == ids))
@@ -86,7 +85,7 @@ namespace SapperLogic
 
             foreach (var cell in instance.Girds)
             {
-                if (!cell.Bomb && !cell.Check) continue;
+                if (cell.Bomb && !cell.Check) continue;
                 instance.Girds[cell.Y, cell.X].Bomb = true;
                 instance.Girds[y, x].Bomb = false;
                 break;
