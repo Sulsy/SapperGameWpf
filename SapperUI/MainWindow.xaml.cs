@@ -98,12 +98,12 @@ namespace SapperUI
         private void Button_OpenCell(object sender, RoutedEventArgs args)
         {
             var cell = sender as Button;
-            GameGrid.OpenCell((int)cell.GetValue(Grid.RowProperty), (int)cell.GetValue(Grid.ColumnProperty));
+            var ar= GameGrid.OpenCell((int)cell.GetValue(Grid.RowProperty), (int)cell.GetValue(Grid.ColumnProperty));
             CheckGridState();
             var IsWin = SapperLogic.GameOperator.GameState(GameGrid.Girds[(int)cell.GetValue(Grid.RowProperty), (int)cell.GetValue(Grid.ColumnProperty)]);
 
             if (IsWin != null && IsWin.Value) { MessageBox.Show("You Win!"); m_Grid.IsEnabled = false; }
-            if (IsWin == null) { MessageBox.Show("You Lose!"); m_Grid.IsEnabled = false; }
+            if (IsWin == null||ar==null) { MessageBox.Show("You Lose!"); m_Grid.IsEnabled = false; }
         }
 
         private void Button_SetFlag(object sender, MouseButtonEventArgs args)

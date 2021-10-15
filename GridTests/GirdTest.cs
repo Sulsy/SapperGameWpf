@@ -185,26 +185,6 @@ namespace GridTests
             Grid.Clean();
         }
         [TestMethod]
-        public void GridWin()
-        {
-            //arange
-            bool win = true;
-            bool? girdWin = false;
-            //act
-            grid = Grid.GetInstance();
-            foreach (var cell in grid.Girds)
-            {
-                if (!cell.Bomb)
-                {
-                    girdWin = grid.OpenCell(cell);
-                }
-                
-            }
-            //assert   
-            Assert.AreEqual(win, girdWin);
-            Grid.Clean();
-        }
-        [TestMethod]
         public void GridFlagClose()
         {
             //arange
