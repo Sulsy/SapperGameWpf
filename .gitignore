@@ -1,0 +1,11 @@
+.vs
+obj
+bin
+Sapper/bin
+Sapper/obj
+SapperUI/bin
+SapperUI/obj
+SapperLogic/bin
+SapperLogic/obj
+GridTests/bin
+GridTests/obj

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SapperLogic", "SapperLogic\SapperLogic.csproj", "{53057996-54FD-4773-931E-8670067C15A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GridTests", "GridTests\GridTests.csproj", "{03B855FD-D813-4B14-BE39-74144247B221}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SapperUI", "SapperUI\SapperUI.csproj", "{EA3CBF9B-FB79-4791-8024-B6474357A1B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53057996-54FD-4773-931E-8670067C15A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53057996-54FD-4773-931E-8670067C15A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53057996-54FD-4773-931E-8670067C15A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53057996-54FD-4773-931E-8670067C15A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B855FD-D813-4B14-BE39-74144247B221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B855FD-D813-4B14-BE39-74144247B221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B855FD-D813-4B14-BE39-74144247B221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B855FD-D813-4B14-BE39-74144247B221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3CBF9B-FB79-4791-8024-B6474357A1B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3CBF9B-FB79-4791-8024-B6474357A1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3CBF9B-FB79-4791-8024-B6474357A1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3CBF9B-FB79-4791-8024-B6474357A1B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40DE8E3E-BDAD-4B78-A333-935D9D434BD7}
+	EndGlobalSection
+EndGlobal
